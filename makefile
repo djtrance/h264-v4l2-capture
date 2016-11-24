@@ -1,7 +1,6 @@
 all: capture
-
-capture: capture.c
-	gcc -O2 -Wall -lv4l2 $^ -o $@
+capture: capture.c V4L.c
+	arm-linux-gcc -O2 -Wall  $^ -o $@
 
 clean:
 	rm -f capture
